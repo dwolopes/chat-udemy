@@ -5,18 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Chat Udemy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <p>Welcome to the chat app  uhuuul:)</p>
+<body class="chat">
 
-    <ol id="messages"></ol>
+    <aside class="chat__sidebar">
+        <h3>People</h3>
+        <div id="users"></div>
+    </aside>
 
-    <form id="message-form">
-        <input name="message" type="text" placeholder="Message"/>
-        <input name="sender" type="text" placeholder="name"/>
-        <button type="submit">Send</button>
-    </form>
-    <button id="send-location">Share Location</button>
+    <div class="chat__main">
+        <ol id="messages" class="chat__messages"></ol>
+
+        <footer class="chat__footer">
+            <form id="message-form">
+                <input name="message" type="text" placeholder="Message" autofocus autocomplete="off"/>
+                <input name="sender" type="text" placeholder="name"/>
+                <button type="submit">Send</button>
+            </form>
+            <button id="send-location">Share Location</button>
+        </footer>
+    
+    </div>
+
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/libs/jquery-3.3.1.min.js"></script>
